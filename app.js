@@ -2,16 +2,20 @@
 
 const express = require("express");
 
-const app = express();
 const ExpressError = require("./expressError");
-
 const companyRoutes = require("./routes/companies");
 const invoiceRoutes = require("./routes/invoices");
+
+const app = express();
 
 app.use(express.json());
 
 app.use("/companies", companyRoutes);
 app.use("/invoices", invoiceRoutes);
+
+app.get("/", function (req, res, next) {
+  return "HOMEPAGE";
+});
 
 /** 404 handler */
 

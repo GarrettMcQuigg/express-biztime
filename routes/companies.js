@@ -60,7 +60,7 @@ router.get("/:code", async (req, res, next) => {
 
 router.post("/", async (req, res, next) => {
   try {
-    let { name, description } = res.body;
+    let { name, description } = req.body;
     let code = slugify(name, { lower: true });
 
     const result = await db.query(

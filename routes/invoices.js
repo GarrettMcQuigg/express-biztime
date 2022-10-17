@@ -133,3 +133,5 @@ router.delete("/:id", async (req, res, next) => {
     return next(e);
   }
 });
+
+module.exports = router;
