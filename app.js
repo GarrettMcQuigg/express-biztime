@@ -13,9 +13,6 @@ app.use(express.json());
 app.use("/companies", companyRoutes);
 app.use("/invoices", invoiceRoutes);
 
-app.get("/", function (req, res, next) {
-  return "HOMEPAGE";
-});
 
 /** 404 handler */
 
